@@ -1,0 +1,23 @@
+{
+  "aboutMe": {
+    "header": "Привет!",
+    "content": [
+      {
+        "type": "text",
+        "text": "I’m Diamond. I am a product designer at <a href=\"https://facebook.com\" target=\"_blank\">Facebook</a>, focused on building meaningful product experiences as part of the News Feed and Stories team. Previously with Logitech as a Visual UX designer."
+      },
+      {
+        "type": "text",
+        "text": "Originally from Hong Kong, I currently live in New York. Struggling as a New Yorker, I am constantly debating between aesthetics or comfort.\n            So far aesthetics have been winning…"
+      },
+      {
+        "type": "text",
+        "text": "I am a full time dog mom for my puppers - Truffle(@handsometruffle) and Waffle. I consider myself a homebody with a travel bug. You will never find me at a local bar, but I am always down to play an intense match of Overcooked."
+      },
+      {
+        "type": "text",
+        "text": "If you want to talk about design, dogs or need advice in life, shoot me an email and we shall chat over boba."
+      }
+    ]
+  }
+}
