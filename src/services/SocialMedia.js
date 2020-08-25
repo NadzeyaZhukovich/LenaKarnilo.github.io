@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-    baseURL: 'http://localhost:8080',
+    baseURL: 'https://raw.githubusercontent.com/NadzeyaZhukovich/LenaKarnilo.github.io/master/public/',
     withCredentials: false,
     headers: {
         Accept: 'application/json',
