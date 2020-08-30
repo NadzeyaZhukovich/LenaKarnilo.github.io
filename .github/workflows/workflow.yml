@@ -1,0 +1,21 @@
+name: Deploy chanhes to gh-pages branch
+on:
+  push:
+    branches:
+      - 'master'
+jobs:
+  deploy:
+    name: Deploy changes to gh-pages branch
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+
+      - name: Installing project dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
