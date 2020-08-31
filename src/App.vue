@@ -3,7 +3,7 @@
     <div class="portfolio-photo"></div>
     <div class="container">
       <Header/>
-      <div class="test">
+      <div class="wrapper">
         <div class="inner">
           <AboutMe/>
           <Contact/>
@@ -27,11 +27,6 @@ export default {
 
 <style lang="scss" scoped>
   .wrapper {
-    display: flex;
-    overflow: hidden;
-  }
-
-  .test {
     display: flex;
     height: 100%;
   }
@@ -66,6 +61,7 @@ export default {
     min-width: 320px;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
 
     @media (min-width: $tablet-width) {
       min-width: 50vw;

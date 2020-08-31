@@ -45,10 +45,10 @@
 
     .icon {
         transition: opacity 0.3s, transform 0.5s;
-        opacity: 54%;
+        opacity: 0.54;
 
         &:hover {
-            opacity: 86%;
+            opacity: 0.86;
             transform: scale(1.1);
         }
     }
