@@ -1,12 +1,15 @@
 <template>
     <div>
-        <h2>Hello Work!</h2>
+        <h2>{{$t("test")}}</h2>
+        <LanguageSelector/>
     </div>
 
 </template>
 
 <script>
+    import LanguageSelector from "../components/LanguageSelector";
     export default {
-        name: 'Work'
+        name: 'Work',
+        components: {LanguageSelector}
     }
 </script>

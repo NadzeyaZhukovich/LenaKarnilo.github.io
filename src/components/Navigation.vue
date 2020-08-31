@@ -6,7 +6,9 @@
                     <router-link to="/">{{$t("homeLink")}}</router-link>
                 </li>
                 <li class="navigation__item">
-                    <router-link to="/work">{{$t("workLink")}}</router-link>
+                    <LocalizedLink to="/work">
+                        {{$t("workLink")}}
+                    </LocalizedLink>
                 </li>
                 <li class="navigation__item">
                     Hobby
@@ -19,9 +21,10 @@
 
 <script>
     import LanguageSelector from "./LanguageSelector";
+    import LocalizedLink from "./LocalizedLink";
     export default {
         name: 'Navigation',
-        components: { LanguageSelector}
+        components: {LocalizedLink, LanguageSelector}
     }
 </script>
 
