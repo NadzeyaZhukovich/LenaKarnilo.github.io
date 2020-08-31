@@ -2,8 +2,15 @@
     <div class="navigation">
         <nav class="navigation__inner">
             <ul class="navigation__list">
-                <li class="navigation__item">Work</li>
-                <li class="navigation__item">Hobby</li>
+                <li class="navigation__item">
+                    <router-link to="/">{{$t("homeLink")}}</router-link>
+                </li>
+                <li class="navigation__item">
+                    <router-link to="/work">{{$t("workLink")}}</router-link>
+                </li>
+                <li class="navigation__item">
+                    Hobby
+                </li>
             </ul>
             <LanguageSelector class="navigation__language-selector"/>
         </nav>

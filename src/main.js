@@ -4,6 +4,7 @@ import './assets/scss/all.scss'
 import VueI18n from 'vue-i18n'
 import en from './locales/en'
 import ru from './locales/ru'
+import router from './router'
 
 Vue.config.productionTip = false
 
@@ -21,5 +22,6 @@ export const i18n = new VueI18n({
 
 new Vue({
   i18n,
+  router,
   render: h => h(App),
 }).$mount('#app')

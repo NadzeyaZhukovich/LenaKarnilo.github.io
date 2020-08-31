@@ -27,9 +27,9 @@
         methods: {
             setLanguage(lang) {
                 if (this.currentLanguage.key !== lang.key ) {
-                    // this.$router.push({
-                    //     query: {...this.$route.query, locale: lang.key}
-                    // });
+                    this.$router.push({
+                        query: {...this.$route.query, locale: lang.key}
+                    });
                     this.$i18n.locale = lang.key;
                 }
             }
