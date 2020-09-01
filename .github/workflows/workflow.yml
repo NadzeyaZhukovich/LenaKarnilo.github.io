@@ -17,5 +17,9 @@ jobs:
       - name: Installing project dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build
+      - name: Build and deploy project
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+        uses: BryanSchuetz/jekyll-deploy-gh-pages@master
