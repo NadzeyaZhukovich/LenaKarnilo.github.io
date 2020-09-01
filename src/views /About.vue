@@ -64,7 +64,7 @@
         position: relative;
 
         @media (min-width: $tablet-width) {
-            min-width: 50vw;
+            width: 50vw;
         }
     }
 </style>

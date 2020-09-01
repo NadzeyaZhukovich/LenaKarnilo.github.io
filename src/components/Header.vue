@@ -1,10 +1,22 @@
 <template>
-    <header class="header">
-        <div class="header__menu-icons" @click="toggleMenu">
-            <BurgerMenuIcon class="icon icon--burger-menu" v-if="!openedMenu"/>
-            <CloseIcon class="icon icon--close" v-else/>
+    <header class="header"
+            :class="{menuOpen: IsOpenMenu}">
+        <div class="header__menu-icons"
+             @click="toggleMenu">
+            <BurgerMenuIcon class="icon icon--burger-menu"
+                            v-if="!IsOpenMenu"/>
+            <CloseIcon class="icon icon--close"
+                       v-else/>
         </div>
-        <Navigation class="menuClose" :class="{menuOpen: openedMenu}"/>
+        <div class="header__nav-wrapper">
+            <Navigation class="menuClose"
+                        :class="{menuOpen: IsOpenMenu}"/>
+            <div class="header__nav-inner">
+                <Contact v-if="IsOpenMenu"/>
+                <LanguageSelector v-if="IsOpenMenu"/>
+            </div>
+        </div>
+
     </header>
 </template>
 
@@ -13,21 +25,35 @@
     import BurgerMenuIcon from "@/assets/icons/ic_menu.svg?inline";
 
     import Navigation from "./Navigation";
+    import Contact from "./Contact";
+    import LanguageSelector from "./LanguageSelector";
     export default {
         name: 'Header',
         components: {
+            LanguageSelector,
+            Contact,
             Navigation,
             CloseIcon,
             BurgerMenuIcon
         },
         data() {
             return {
-                openedMenu: false,
+                IsOpenMenu: false,
             }
         },
         methods: {
             toggleMenu() {
-                this.openedMenu = !this.openedMenu;
+                this.IsOpenMenu = !this.IsOpenMenu;
+            }
+        },
+
+        watch: {
+            IsOpenMenu(newValue) {
+                if (newValue === true) {
+                    document.body.classList.add('open');
+                } else {
+                    document.body.classList.remove('open');
+                }
             }
         }
     }
@@ -51,6 +77,23 @@
             opacity: 0.86;
             transform: scale(1.1);
         }
+    }
+
+    .header__nav-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100% - 60px);
+    }
+
+    .header__nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header.menuOpen {
+        height: 100vh;
     }
 
     .menuClose {

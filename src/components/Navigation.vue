@@ -64,6 +64,7 @@
         opacity: 0.54;
         cursor: pointer;
         font-weight: 600;
+        text-transform: capitalize;
 
         &:hover {
             color: $text-color;

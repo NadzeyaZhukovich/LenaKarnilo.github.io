@@ -39,7 +39,7 @@
         margin: 20px 0;
 
         @media (min-width: $tablet-width) {
-            margin: 40px 0;
+            margin: 0 0 40px 0;
             font-size: 50px;
         }
     }
