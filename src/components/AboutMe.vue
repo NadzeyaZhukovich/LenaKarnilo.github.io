@@ -19,7 +19,7 @@
             }
         },
         created() {
-            AboutMeEN.getAboutMe('en')
+            AboutMeEN.getAboutMe(this.$i18n.locale)
                 .then(response => {
                     this.aboutMe = response.data.aboutMe
                 })
